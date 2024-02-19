@@ -5,7 +5,7 @@ plugins {
 }
 
 version = "0.1"
-group = "com.example"
+group = "com.nomadcompass"
 
 repositories {
     mavenCentral()
@@ -22,7 +22,7 @@ dependencies {
 
 
 application {
-    mainClass.set("com.example.Application")
+    mainClass.set("com.nomadcompass.Application")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("17")
@@ -36,7 +36,7 @@ micronaut {
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("com.example.*")
+        annotations("com.nomadcompass.*")
     }
     aot {
     // Please review carefully the optimizations enabled below

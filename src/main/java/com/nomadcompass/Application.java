@@ -1,4 +1,4 @@
-package com.example;
+package com.nomadcompass;
 
 import io.micronaut.runtime.Micronaut;
 
