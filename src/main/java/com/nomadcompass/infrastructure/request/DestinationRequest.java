@@ -9,5 +9,6 @@ public class DestinationRequest {
 
     private String id;
     private String arrivalDate;
+    private String endDate;
 
 }

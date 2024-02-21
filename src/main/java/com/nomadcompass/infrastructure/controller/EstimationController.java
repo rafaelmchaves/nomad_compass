@@ -7,7 +7,7 @@ import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Put;
 
-@Controller("/estimation")
+@Controller("/calculate-estimate")
 public class EstimationController {
 
     @Put(produces = "application/json", consumes = "application/json")
