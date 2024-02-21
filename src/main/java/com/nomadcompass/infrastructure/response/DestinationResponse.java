@@ -1,9 +1,9 @@
 package com.nomadcompass.infrastructure.response;
 
-import com.nomadcompass.infrastructure.request.DestinationRequest;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -15,6 +15,8 @@ public class DestinationResponse {
     private List<LeisureResponse> leisureList;
     private List<AccommodationResponse> accommodations;
     private List<TouristicPlacesResponse> touristicPlaces;
-
+    private BigDecimal totalCost;
+    private BigDecimal totalTour;
+    private BigDecimal accommodationCostAverage;
 
 }
