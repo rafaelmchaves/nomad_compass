@@ -14,6 +14,7 @@ public class DestinationResponse {
     private List<WeeklyCostResponse> weeklyCosts;
     private List<LeisureResponse> leisureList;
     private List<AccommodationResponse> accommodations;
+    private List<TouristicPlacesResponse> touristicPlaces;
 
 
 }
