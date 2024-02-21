@@ -9,6 +9,8 @@ import java.util.List;
 @Setter
 public class DestinationResponse {
 
-    List<TransportationOptionsResponse> transportations;
+    private List<TransportationOptionsResponse> transportations;
+    private List<WeeklyCostResponse> weeklyCosts;
+    private List<LeisureResponse> leisureList;
 
 }

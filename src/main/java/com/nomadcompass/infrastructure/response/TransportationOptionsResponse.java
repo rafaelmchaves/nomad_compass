@@ -12,5 +12,4 @@ public class TransportationOptionsResponse {
     private String type;
     private BigDecimal cost;
 
-
 }
