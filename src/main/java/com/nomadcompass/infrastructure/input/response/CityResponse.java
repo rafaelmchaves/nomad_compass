@@ -1,5 +1,10 @@
-package com.nomadcompass.infrastructure.request;
+package com.nomadcompass.infrastructure.input.response;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
 public class CityResponse {
 
     private String id;

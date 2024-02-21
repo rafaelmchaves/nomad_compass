@@ -1,4 +1,4 @@
-package com.nomadcompass.infrastructure.response;
+package com.nomadcompass.infrastructure.input.response;
 
 import lombok.Getter;
 import lombok.Setter;

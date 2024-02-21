@@ -1,4 +1,4 @@
-package com.nomadcompass.infrastructure.response;
+package com.nomadcompass.infrastructure.input.response;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,8 +7,8 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
-public class TouristicPlacesResponse {
+public class AccommodationResponse {
 
-    private String name;
+    private String type;
     private BigDecimal cost;
 }

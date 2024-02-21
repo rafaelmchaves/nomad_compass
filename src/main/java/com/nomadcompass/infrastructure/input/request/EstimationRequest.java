@@ -1,4 +1,4 @@
-package com.nomadcompass.infrastructure.request;
+package com.nomadcompass.infrastructure.input.request;
 
 
 import lombok.Getter;

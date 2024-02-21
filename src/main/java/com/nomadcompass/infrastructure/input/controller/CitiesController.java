@@ -1,6 +1,6 @@
-package com.nomadcompass.infrastructure.controller;
+package com.nomadcompass.infrastructure.input.controller;
 
-import com.nomadcompass.infrastructure.request.CityResponse;
+import com.nomadcompass.infrastructure.input.response.CityResponse;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;

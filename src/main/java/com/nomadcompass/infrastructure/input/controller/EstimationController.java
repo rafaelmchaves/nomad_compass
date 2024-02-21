@@ -1,7 +1,7 @@
-package com.nomadcompass.infrastructure.controller;
+package com.nomadcompass.infrastructure.input.controller;
 
-import com.nomadcompass.infrastructure.request.EstimationRequest;
-import com.nomadcompass.infrastructure.response.EstimationResponse;
+import com.nomadcompass.infrastructure.input.request.EstimationRequest;
+import com.nomadcompass.infrastructure.input.response.EstimationResponse;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
