@@ -7,8 +7,8 @@ import java.util.List;
 
 @Getter
 @Setter
-public class EstimationResponse {
+public class DestinationResponse {
 
-    List<DestinationResponse> destinations;
+    List<TransportationOptionsResponse> transportations;
 
 }
