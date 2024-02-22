@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.bson.types.ObjectId;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Singleton
@@ -24,6 +25,11 @@ public class CityUseCaseImpl implements CityUseCase {
     public City create(City city) {
         city.setCreationDate(LocalDateTime.now());
         return this.cityRepository.save(city);
+    }
+
+    @Override
+    public List<City> getByName(String name) {
+       return this.cityRepository.findByNameLike(name);
     }
 
 }

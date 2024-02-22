@@ -7,6 +7,9 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RequiredArgsConstructor
 @Controller("/cities")
 public class CitiesController {
@@ -16,9 +19,9 @@ public class CitiesController {
     private final CityMapper cityMapper;
 
     @Get(produces = "application/json")
-    public HttpResponse<CityResponse> getByQuery(@QueryValue String name) {
-
-        return HttpResponse.ok();
+    public HttpResponse<List<CityResponse>> getByQuery(@QueryValue String name) {
+        final var cities = this.cityUseCase.getByName(name);
+        return HttpResponse.ok(cities.stream().map(cityMapper::cityToCityResponse).collect(Collectors.toList()));
     }
 
     @Get(produces = "application/json", value = "/{id}")
