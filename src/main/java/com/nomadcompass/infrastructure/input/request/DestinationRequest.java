@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class DestinationRequest {
 
-    private String id;
+    private String cityId;
     private String arrivalDate;
     private String endDate;
 

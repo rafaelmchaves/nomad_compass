@@ -10,6 +10,7 @@ import java.util.List;
 @Getter
 public class EstimationRequest {
 
+    private String rootCityId;
     private List<DestinationRequest> destinations;
     private Integer amountDaysPerWeekRestaurant;
     private Integer amountDaysPerWeekBar;
