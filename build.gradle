@@ -12,15 +12,22 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.projectlombok:lombok")
     annotationProcessor("io.micronaut:micronaut-http-validation")
+    //It's necessary this annotation processor in order to Mongo Repository annotation works
+    annotationProcessor("io.micronaut.data:micronaut-data-document-processor")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+    annotationProcessor 'org.projectlombok:lombok:1.15.10'
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     implementation("io.micronaut.data:micronaut-data-mongodb")
-    compileOnly("io.micronaut:micronaut-http-client")
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.mongodb:mongodb-driver-sync")
     testImplementation("io.micronaut:micronaut-http-client")
+
+
+
 }
 
 

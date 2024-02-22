@@ -1,23 +1,19 @@
-package com.nomadcompass.infrastructure.input.response;
+package com.nomadcompass.infrastructure.input.request;
 
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.serde.annotation.Serdeable;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-@Builder
-@Getter
 @Setter
+@Getter
 @Introspected
-@Serdeable.Serializable
-public class CityResponse {
+@Serdeable.Deserializable
+public class CityRequest {
 
-    private String id;
     private String name;
     private String state;
     private String country;
     private String latitude;
     private String longitude;
-
 }
