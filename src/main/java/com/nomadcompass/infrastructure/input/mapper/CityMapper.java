@@ -1,4 +1,4 @@
-package com.nomadcompass.infrastructure.input.controller;
+package com.nomadcompass.infrastructure.input.mapper;
 
 import com.nomadcompass.infrastructure.input.request.AirportRequest;
 import com.nomadcompass.infrastructure.input.request.CityInformationRequest;
@@ -16,7 +16,7 @@ import java.util.List;
 @Singleton
 public class CityMapper {
 
-    CityResponse cityToCityResponse(City city) {
+    public CityResponse cityToCityResponse(City city) {
         return CityResponse.builder().id(city.getId().toString())
                 .name(city.getName())
                 .state(city.getState())
@@ -28,7 +28,7 @@ public class CityMapper {
                 .build();
     }
 
-    City cityRequestToCity(CityRequest cityRequest) {
+    public City cityRequestToCity(CityRequest cityRequest) {
         return City.builder()
                 .name(cityRequest.getName())
                 .state(cityRequest.getState())

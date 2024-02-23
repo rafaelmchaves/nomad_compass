@@ -1,6 +1,7 @@
 package com.nomadcompass.infrastructure.input.controller;
 
 import com.nomadcompass.core.usecase.CityUseCase;
+import com.nomadcompass.infrastructure.input.mapper.CityMapper;
 import com.nomadcompass.infrastructure.input.request.CityRequest;
 import com.nomadcompass.infrastructure.input.response.CityResponse;
 import io.micronaut.http.HttpResponse;
