@@ -2,8 +2,12 @@ package com.nomadcompass.infrastructure.input.controller;
 
 import com.nomadcompass.infrastructure.input.request.CityRequest;
 import com.nomadcompass.infrastructure.input.response.CityResponse;
+import com.nomadcompass.infrastructure.output.entity.Airport;
 import com.nomadcompass.infrastructure.output.entity.City;
+import com.nomadcompass.infrastructure.output.entity.CityInformation;
 import jakarta.inject.Singleton;
+
+import java.util.List;
 
 @Singleton
 public class CityMapper {
@@ -25,7 +29,24 @@ public class CityMapper {
                 .country(cityRequest.getCountry())
                 .longitude(cityRequest.getLongitude())
                 .latitude(cityRequest.getLatitude())
+                .airports(airportRequestToAirport(cityRequest))
+                .information(informationRequestToInformation(cityRequest))
                 .build();
+    }
+
+    private static CityInformation informationRequestToInformation(CityRequest cityRequest) {
+        return CityInformation.builder().portuguese(cityRequest.getInformation().getPortuguese())
+                .english(cityRequest.getInformation().getEnglish())
+                .build();
+    }
+
+    private static List<Airport> airportRequestToAirport(CityRequest cityRequest) {
+        return cityRequest.getAirports().stream()
+                .map(airportsRequest -> Airport.builder().label(airportsRequest.getLabel())
+                        .distanceKm(airportsRequest.getDistanceKm())
+                        .averageBusCost(airportsRequest.getAverageBusCost())
+                        .averageMetroCost(airportsRequest.getAverageMetroCost())
+                        .build()).toList();
     }
 
 }

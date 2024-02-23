@@ -5,6 +5,8 @@ import io.micronaut.serde.annotation.Serdeable;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Setter
 @Getter
 @Introspected
@@ -16,4 +18,6 @@ public class CityRequest {
     private String country;
     private String latitude;
     private String longitude;
+    private List<AirportsRequest> airports;
+    private CityInformationRequest information;
 }

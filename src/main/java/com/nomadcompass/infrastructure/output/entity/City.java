@@ -31,7 +31,7 @@ public class City {
     private String latitude;
     private String longitude;
     private LocalDateTime creationDate;
-    private List<Airports> airports;
+    private List<Airport> airports;
     private CityInformation information;
 
 }
