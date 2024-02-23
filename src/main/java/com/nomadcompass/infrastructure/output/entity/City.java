@@ -9,6 +9,7 @@ import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.ObjectId;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -30,6 +31,7 @@ public class City {
     private String latitude;
     private String longitude;
     private LocalDateTime creationDate;
-
+    private List<Airports> airports;
+    private CityInformation information;
 
 }
