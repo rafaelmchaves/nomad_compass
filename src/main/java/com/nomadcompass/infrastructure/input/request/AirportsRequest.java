@@ -5,6 +5,8 @@ import io.micronaut.serde.annotation.Serdeable;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Introspected
 @Serdeable.Deserializable
 @Getter
@@ -12,9 +14,9 @@ import lombok.Setter;
 public class AirportsRequest {
 
     private String label;
-    private String distanceKm;
-    private String averageUberCost;
-    private String averageBusCost;
-    private String averageMetroCost;
+    private BigDecimal distanceKm;
+    private BigDecimal averageUberCost;
+    private BigDecimal averageBusCost;
+    private BigDecimal averageMetroCost;
 
 }
