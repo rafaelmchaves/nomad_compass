@@ -18,6 +18,6 @@ public class CityRequest {
     private String country;
     private String latitude;
     private String longitude;
-    private List<AirportsRequest> airports;
+    private List<AirportRequest> airports;
     private CityInformationRequest information;
 }

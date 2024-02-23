@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Builder
 @Getter
 @Setter
@@ -19,5 +21,7 @@ public class CityResponse {
     private String country;
     private String latitude;
     private String longitude;
+    private List<AirportResponse> airports;
+    private CityInformationResponse information;
 
 }

@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Serdeable.Deserializable
 @Getter
 @Setter
-public class AirportsRequest {
+public class AirportRequest {
 
     private String label;
     private BigDecimal distanceKm;
