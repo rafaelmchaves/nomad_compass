@@ -10,9 +10,11 @@ import java.util.List;
 @Setter
 public class DestinationResponse {
 
+    private String cityName;
+    private String cityId;
     private List<TransportationOptionsResponse> transportations;
-    private List<WeeklyCostResponse> weeklyCosts;
-    private List<LeisureResponse> leisureList;
+    private WeeklyCostResponse weeklyCost;
+    private LeisureResponse leisureList;
     private List<AccommodationResponse> accommodations;
     private List<TouristicPlacesResponse> touristicPlaces;
     private BigDecimal totalCost;

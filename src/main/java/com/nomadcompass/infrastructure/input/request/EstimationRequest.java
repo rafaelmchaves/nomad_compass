@@ -16,5 +16,6 @@ public class EstimationRequest {
     private Integer amountDaysPerWeekBar;
     private Integer transportationAmount;
     private Integer uberAmount;
+    private Integer peopleNumber;
 
 }

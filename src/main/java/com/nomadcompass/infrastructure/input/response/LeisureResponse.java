@@ -9,7 +9,11 @@ import java.math.BigDecimal;
 @Setter
 public class LeisureResponse {
 
-    private String name;
-    private BigDecimal cost;
+    private BigDecimal cheapRestaurant;
+    private BigDecimal averageRestaurant;
+    private BigDecimal expensiveRestaurant;
+    private BigDecimal cheapBar;
+    private BigDecimal averageBar;
+    private BigDecimal expensiveBar;
 
 }

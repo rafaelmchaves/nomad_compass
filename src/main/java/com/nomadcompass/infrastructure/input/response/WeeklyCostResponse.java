@@ -9,7 +9,8 @@ import java.math.BigDecimal;
 @Setter
 public class WeeklyCostResponse {
 
-    private String name;
-    private BigDecimal value;
+    private BigDecimal restaurant;
+    private BigDecimal bar;
+    private BigDecimal supermarket;
 
 }
