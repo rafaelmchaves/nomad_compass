@@ -11,9 +11,7 @@ import java.util.List;
 public class EstimationResponse {
 
     private List<DestinationResponse> destinations;
-    private BigDecimal totalCostWithAirFlight;
-    private BigDecimal totalCostWithCar;
-    private BigDecimal totalCostWithBus;
+    private BigDecimal totalCost;
     private BigDecimal totalWithTour;
 
 }

@@ -15,6 +15,8 @@ public class EstimationRequest {
     private Integer amountDaysPerWeekRestaurant;
     private Integer amountDaysPerWeekBar;
     private Integer transportationAmount;
+    private boolean isUseToDrinkAlcohol;
+    private boolean isUseToEatBar;
     private Integer uberAmount;
     private Integer peopleNumber;
 

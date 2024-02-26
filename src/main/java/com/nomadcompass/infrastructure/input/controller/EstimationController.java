@@ -13,7 +13,7 @@ public class EstimationController {
     @Put(produces = "application/json", consumes = "application/json")
     public HttpResponse<EstimationResponse> estimate(@Body EstimationRequest estimationRequest) {
 
-
+        
         return HttpResponse.ok();
     }
 
