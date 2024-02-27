@@ -33,10 +33,8 @@ public class EstimationUseCaseImpl implements EstimationUseCase {
             final var lifeCost = this.lifeCostRepository.findByCityId(destinationRequest.getCityId());
 
             WeeklyCostResponse weeklyCostResponse = new WeeklyCostResponse();
-            BigDecimal barCostPerWeek = BigDecimal.ZERO;
-            barCostPerWeek = getBarCostPerWeek(estimationRequest, lifeCost, barCostPerWeek);
 
-            weeklyCostResponse.setBar(barCostPerWeek);
+            weeklyCostResponse.setBar(getBarCostPerWeek(estimationRequest, lifeCost));
             final var destinationResponse = new DestinationResponse();
             destinationResponse.setCityId(destinationResponse.getCityId());
             destinationResponse.setWeeklyCost(weeklyCostResponse);
@@ -47,7 +45,10 @@ public class EstimationUseCaseImpl implements EstimationUseCase {
         //transportation from each city to another(starting from root)
     }
 
-    private static BigDecimal getBarCostPerWeek(EstimationRequest estimationRequest, LifeCost lifeCost, BigDecimal barCostPerWeek) {
+    private static BigDecimal getBarCostPerWeek(EstimationRequest estimationRequest, LifeCost lifeCost) {
+
+        BigDecimal barCostPerWeek = BigDecimal.ZERO;
+
         if (estimationRequest.getAmountDaysPerWeekBar() > 0) {
 
             if (estimationRequest.isUseToDrinkAlcohol()) {
@@ -57,7 +58,8 @@ public class EstimationUseCaseImpl implements EstimationUseCase {
                         .multiply(new BigDecimal(estimationRequest.getAmountDaysPerWeekBar()));
 
             } else {
-                barCostPerWeek = lifeCost.getBarCost().getNoAlcoholDrink().multiply(new BigDecimal(AVERAGE_NO_ALCOHOL_DRINKS_PER_PERSON_BAR));
+                barCostPerWeek = lifeCost.getBarCost().getNoAlcoholDrink().multiply(
+                        new BigDecimal(AVERAGE_NO_ALCOHOL_DRINKS_PER_PERSON_BAR));
             }
 
             if (estimationRequest.isUseToEatBar()) {
