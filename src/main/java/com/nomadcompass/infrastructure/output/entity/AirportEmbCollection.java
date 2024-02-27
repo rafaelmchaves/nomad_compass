@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Builder
 @Getter
 @Setter
-public class Airport {
+public class AirportEmbCollection {
 
     private String label;
     private BigDecimal distanceKm;

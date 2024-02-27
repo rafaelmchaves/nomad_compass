@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Introspected
 @Getter
 @Setter
-public class Accommodation {
+public class AccommodationEmbCollection {
 
     private String type;
 

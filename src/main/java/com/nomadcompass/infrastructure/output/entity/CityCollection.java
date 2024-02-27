@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
 @MappedEntity(value = "cities")
-public class City {
+public class CityCollection {
 
     @Id
     @GeneratedValue
@@ -31,7 +31,7 @@ public class City {
     private String latitude;
     private String longitude;
     private LocalDateTime creationDate;
-    private List<Airport> airports;
-    private CityInformation information;
+    private List<AirportEmbCollection> airports;
+    private CityInformationEmbCollection information;
 
 }

@@ -1,7 +1,7 @@
 package com.nomadcompass.core.usecase.impl;
 
 import com.nomadcompass.core.usecase.CityUseCase;
-import com.nomadcompass.infrastructure.output.entity.City;
+import com.nomadcompass.infrastructure.output.entity.CityCollection;
 import com.nomadcompass.infrastructure.output.repository.CityRepository;
 import jakarta.inject.Singleton;
 import lombok.RequiredArgsConstructor;
@@ -17,18 +17,18 @@ public class CityUseCaseImpl implements CityUseCase {
     private final CityRepository cityRepository;
 
     @Override
-    public City getById(String id) {
-        return this.cityRepository.findById(new ObjectId(id)).orElse(new City());
+    public CityCollection getById(String id) {
+        return this.cityRepository.findById(new ObjectId(id)).orElse(new CityCollection());
     }
 
     @Override
-    public City create(City city) {
-        city.setCreationDate(LocalDateTime.now());
-        return this.cityRepository.save(city);
+    public CityCollection create(CityCollection cityCollection) {
+        cityCollection.setCreationDate(LocalDateTime.now());
+        return this.cityRepository.save(cityCollection);
     }
 
     @Override
-    public List<City> getByName(String name) {
+    public List<CityCollection> getByName(String name) {
        return this.cityRepository.findByNameLike(name);
     }
 

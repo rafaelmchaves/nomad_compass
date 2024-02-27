@@ -12,7 +12,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class CityInformation {
+public class CityInformationEmbCollection {
 
     private String portuguese;
     private String english;

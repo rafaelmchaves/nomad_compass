@@ -8,6 +8,8 @@ import com.nomadcompass.infrastructure.input.request.EstimationRequest;
 import com.nomadcompass.infrastructure.input.response.DestinationResponse;
 import com.nomadcompass.infrastructure.input.response.EstimationResponse;
 import com.nomadcompass.infrastructure.input.response.WeeklyCostResponse;
+import com.nomadcompass.infrastructure.output.entity.BarCostEmbCollection;
+import com.nomadcompass.infrastructure.output.entity.LifeCostCollection;
 import com.nomadcompass.infrastructure.output.repository.LifeCostRepository;
 import jakarta.inject.Singleton;
 import lombok.RequiredArgsConstructor;
@@ -47,17 +49,17 @@ public class EstimationUseCaseImpl implements EstimationUseCase {
         //transportation from each city to another(starting from root)
     }
 
-    private LifeCost getLifeCostModel(com.nomadcompass.infrastructure.output.entity.LifeCost lifeCost) {
+    private LifeCost getLifeCostModel(LifeCostCollection lifeCostCollection) {
         return LifeCost.builder()
                 .barCost(
-                        getBarCost(lifeCost.getBarCost())
+                        getBarCost(lifeCostCollection.getBarCostEmbCollection())
                 )
                 .build();
     }
 
-    private static BarCost getBarCost(com.nomadcompass.infrastructure.output.entity.BarCost barCost) {
-        return BarCost.builder().alcoholDrink(barCost.getAlcoholDrink()).noAlcoholDrink(barCost.getNoAlcoholDrink())
-                .cheapSnack(barCost.getCheapSnack()).expensiveSnack(barCost.getExpensiveSnack())
+    private static BarCost getBarCost(BarCostEmbCollection barCostEmbCollection) {
+        return BarCost.builder().alcoholDrink(barCostEmbCollection.getAlcoholDrink()).noAlcoholDrink(barCostEmbCollection.getNoAlcoholDrink())
+                .cheapSnack(barCostEmbCollection.getCheapSnack()).expensiveSnack(barCostEmbCollection.getExpensiveSnack())
                 .build();
     }
 

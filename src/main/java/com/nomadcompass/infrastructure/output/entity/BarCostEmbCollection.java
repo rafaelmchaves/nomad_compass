@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Introspected
 @Getter
 @Setter
-public class BarCost {
+public class BarCostEmbCollection {
 
     @BsonProperty(value = "alcohol_drink")
     private BigDecimal alcoholDrink;

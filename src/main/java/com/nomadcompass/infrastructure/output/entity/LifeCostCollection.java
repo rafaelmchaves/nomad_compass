@@ -16,7 +16,7 @@ import java.util.Set;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
 @MappedEntity(value = "life_cost")
-public class LifeCost {
+public class LifeCostCollection {
 
     @Id
     @GeneratedValue
@@ -28,15 +28,15 @@ public class LifeCost {
     private String cityId;
 
     @BsonProperty(value = "restaurant_cost")
-    private RestaurantCost restaurantCost;
+    private RestaurantCostEmbCollection restaurantCost;
 
     @BsonProperty(value = "bar_cost")
-    private BarCost barCost;
+    private BarCostEmbCollection barCostEmbCollection;
 
     @BsonProperty(value = "weekly_supermarket_cost")
-    private SupermarketCost weeklySupermarketCost;
+    private SupermarketCostEmbCollection weeklySupermarketCost;
 
     @BsonProperty(value = "commute_options")
-    private Set<CommuteOption> commuteOptions;
-    private Set<Accommodation> accommodations;
+    private Set<CommuteOptionEmbCollection> commuteOptions;
+    private Set<AccommodationEmbCollection> accommodations;
 }

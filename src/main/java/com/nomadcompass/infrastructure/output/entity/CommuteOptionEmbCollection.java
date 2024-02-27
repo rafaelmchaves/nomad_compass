@@ -7,10 +7,9 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
-public class SupermarketCost {
+public class CommuteOptionEmbCollection {
 
-    private BigDecimal minimum;
-    private BigDecimal average;
-    private BigDecimal maximum;
+    private String name;
+    private BigDecimal cost;
 
 }
